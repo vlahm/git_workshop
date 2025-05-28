@@ -1,0 +1,118 @@
+Bash (Unix shell) basic commands
+--------------------------------
+These commands are available natively on Mac OS and Linux, or through Git command line on Windows.
+
+Read anything inside angle brackets (e.g. <foo>) as a variable, i.e. not literally.
+
+Anything preceded by "-" indicates an optional argument, called a "flag". Here's a command without a flag:
+	mkdir dir1/subdir1
+and with a flag:
+	mkdir -p dir1/subdir1
+
+Use this to decipher any shell command: https://explainshell.com/
+--------------------------------
+
+1. get manual page for any bash command
+
+man <command>
+
+2. print working (current) directory
+
+pwd
+
+3. list files and directories (from the working directory unless specified)
+
+ls
+    -l (include metadata)
+    -R (recursive)
+	-a (include hidden files and directories, i.e. those prefixed with a ".")
+
+4. change directory
+
+cd <directory>
+
+special values:
+    .. (parent directory)
+    ~ (home)
+    - (previous)
+    / (root)
+
+5. make and remove directory
+
+mkdir <directory>
+rmdir <directory> (only works if directory is empty; otherwise see rm)
+
+6. create file
+
+touch <file>
+
+7. remove files and directories
+
+rm <file>
+    -r (recursively - USE WITH CAUTION)
+    -f (force - USE WITH CAUTION)
+
+8. move and/or rename files and directories
+
+mv <from> <to>
+    -i ("interactive": ask to confirm if something will be overwritten)
+
+9. copy files and directories
+
+cp <from> <to>
+    -i (interactive)
+    -r (recursive)
+
+10. open file in text editor
+
+nano <file> (simple text editor)
+vim <file> (advanced text editor)
+
+-----------------------------------------
+MORE ADVANCED COMMANDS
+
+some commands take more detailed arguments, using this form:
+	command -parameter argument
+for example, this command for finding files that are not directories, a maximum of five levels below the working directory, and ending in ".txt"
+	find . -maxdepth 5 -name '*.txt' -type f
+-----------------------------------------
+
+11. search for files/directories
+
+find <search string>
+    -type (f = files, d = directories, etc.)
+	-name (search by name)
+    -iname (case insensitive)
+    -maxdepth (only search down x levels)
+	-atime (search by last-access time)
+
+#here's an example of executing the head command (print first few lines) for all files returned by find:
+find . -name '*.txt' -type f -exec head {} \;
+
+12. search for text strings within files
+
+grep <search string> <file or directory>
+    -r (recursive)
+    -P (with regular expressions)
+	-l (return filenames only)
+
+13. you can pipe the output of one command into another command with "|", e.g.:
+
+grep -r 'my search string' | less
+
+----------------------------------------
+other
+----------------------------------------
+
+14. print contents of file
+
+cat <file> 
+
+15. program for paging through text files. use PgUp, PgDn, u, d, j, k to scroll; /, n, N to search; q to quit
+
+less <file>
+
+16. run as root (dangerous, but necessary for some installations and admin actions)
+
+sudo <command>
+
