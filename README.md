@@ -15,7 +15,7 @@ A repo for git demonstrations
 ## Simple version control
 
 1. make a new repo (on GitHub)
-   1. From https://github.com/your\_username, click Repositories -> New
+   1. From https://github.com/your_username, click Repositories -> New
    2. Name it "git\_demo" and give a short description
    3. Add a README (or do so later)
    4. Optional: give it a default `.gitignore` file for the primary language of the repo. This will prevent git from tracking files that don't need to be version-controlled.
