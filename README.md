@@ -5,8 +5,8 @@ A repo for git demonstrations
 
 1. [install git](https://github.com/git-guides/install-git)
 2. Configure git with your name and email, and enable clean handling of OS-specific line endings
-   + `git config --global user.name '\<your name\>'`
-   + `git config --global user.email '\<your email\>'`
+   + `git config --global user.name '<your name>'`
+   + `git config --global user.email '<your email>'`
    + Windows users: `git config --global core.autocrlf true`
    + macOS/Linux/Unix users: `git config --global core.autocrlf input`
    + optional: `git config --global core.editor <nano/vim/emacs>`
@@ -15,8 +15,8 @@ A repo for git demonstrations
 ## Simple version control
 
 1. make a new repo (on GitHub)
-   1. From https://github.com/\<your username\>, click Repositories -> New
-   2. Name it "git_demo" and give a short description
+   1. From https://github.com/your\_username, click Repositories -> New
+   2. Name it "git\_demo" and give a short description
    3. Add a README (or do so later)
    4. Optional: give it a default `.gitignore` file for the primary language of the repo. This will prevent git from tracking files that don't need to be version-controlled.
    5. Give your repo a license
