@@ -148,4 +148,4 @@ Your job is to delete one variant of the conflicted code, and delete all of the 
    + `git config --global alias.slog log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit`
    + `git config --global alias.c  "commit -m"`
 
-         After running those config lines, you can type `git slog` instead of `git log` to show a compact, informative log. You can also type `git c "message"` instead of `git commit -m "message"`. 
+After running those config lines, you can type `git slog` instead of `git log` to show a compact, informative log. You can also type `git c "message"` instead of `git commit -m "message"`. 
