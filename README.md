@@ -1,7 +1,8 @@
 # git_workshop
-**Git setup and standard procedure, with shell commands and Rstudio equivalents**
 
-**Please complete steps 1-3 of the "Setup and configuration" section before the workshop begins**
+### Git setup and standard procedure, with shell commands and Rstudio equivalents
+
+**Please complete steps 1 and 2 of the "Setup and configuration" section before the workshop begins. If you'll be using Rsudio's integrated version control, also complete step 3.
 
  + _Italicized text pertains to Rstudio_.
  + If you're on Windows, this guide assumes you will interact with git through git bash, not cmd or Powershell.
@@ -15,21 +16,21 @@ There are no Rstudio equivalents for most of these steps.
 
 1. [install git](https://git-scm.com/downloads)
 2. Create an account on [github.com](https://github.com/).
-2. _Install [R](https://www.r-project.org/) and [Rstudio](https://posit.co/downloads/). Make sure Rstudio is updated_
-2. In terminal (Mac, Linux) or git bash (Windows), configure git with your name and email
+3. _Install [R](https://www.r-project.org/) and [Rstudio](https://posit.co/downloads/). Make sure Rstudio is updated_
+4. In terminal (Mac, Linux) or git bash (Windows), configure git with your name and email
    + `git config --global user.name '<your name>'`
    + `git config --global user.email '<your email>'`
-3. Optional: set your default text editor, if you didn't do that during installation.
+5. Optional: set your default text editor, if you didn't do that during installation.
    + optional: `git config --global core.editor <nano/vim/emacs>`
-4. If you run into trouble with line endings when collaborating, you may need these:
+6. If you run into trouble with line endings when collaborating, you may need these:
    + Windows users: `git config --global core.autocrlf true`
    + macOS/Linux/Unix users: `git config --global core.autocrlf input`
-5. _Make sure Rstudio knows where to find the git executable_
+7. _Make sure Rstudio knows where to find the git executable_
    + _Tools → Global Options → Git/SVN; The path listed under "Git executable" should end with "git" or "git.exe". If it doesn't:_
       + _Mac/Linux terminal: `which git` to reveal the path to the executable; browse to that path in Rstudio_
       + _Windows git bash terminal: `cygpath -w "$(which git)"` to reveal the path to the executable; browse to git.exe in Rstudio_
       + _Restart Rstudio_
-6. Optional: [Establish secure connection to GitHub from your machine](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys).
+8. Optional: [Establish secure connection to GitHub from your machine](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys).
    + _This can also be done from Rstudio: Tools → Global Options → Git/SVN → Create SSH Key_
 
 ## Create a "remote repository"
