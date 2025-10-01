@@ -2,7 +2,7 @@
 
 ### Git setup and standard procedure, with shell commands and Rstudio equivalents
 
-**Please complete steps 1 and 2 of the "Setup and configuration" section before the workshop begins. If you'll be using Rsudio's integrated version control, also complete step 3.
+**Please complete steps 1 and 2 of the "Setup and configuration" section before the workshop begins. If you'll be using Rsudio's integrated version control, also complete step 3.**
 
  + _Italicized text pertains to Rstudio_.
  + If you're on Windows, this guide assumes you will interact with git through git bash, not cmd or Powershell.
