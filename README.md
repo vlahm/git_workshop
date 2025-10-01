@@ -49,34 +49,34 @@ There are no Rstudio equivalents for most of these steps.
 
 ## Simple version control (shell)
 
-2. Clone the repo to your machine
-   2. navigate locally to where repo will live, e.g. `cd ~/projects`
+1. Clone the repo to your machine
+   1. navigate locally to where repo will live, e.g. `cd ~/projects`
    3. `git clone <paste>`
    4. Press enter. now you should have `~/projects/git_demo`
    5. `cd git_demo`
-3. Add a new file to the repo
+2. Add a new file to the repo
    1. You could use your graphical file explorer, or `nano new_file.txt`
    2. Add some text to the file
    3. Save the file
-4. Use `git status` to see what has changed
-5. Use `git add new_file.txt` to add the file to the staging area, or `git add .` to recursively add all files in the current directory.
+3. Use `git status` to see what has changed
+4. Use `git add new_file.txt` to add the file to the staging area, or `git add .` to recursively add all files in the current directory.
    + It's good practice to verify each action with `git status`, to make sure you're tracking only the files you mean to
-6. Use `git commit -m "some descriptive message about what you're committing"` to commit the file. Think of this as a checkpoint. You can return to it any time.
+5. Use `git commit -m "some descriptive message about what you're committing"` to commit the file. Think of this as a checkpoint. You can return to it any time.
    + `git status` again
-7. Use `git push origin main` to send your commit to GitHub.
+6. Use `git push origin main` to send your commit to GitHub.
    + "origin" is the default name of your remote repository. You can view its url with `git remote -v`
 
 ## _Simple version control (Rstudio)_
 
-2. Clone the repo to your machine
-   2. File → New Project → Version Control → Git → paste the repository URL
-3. Add a new file to the repo
+1. Clone the repo to your machine
+   1. File → New Project → Version Control → Git → paste the repository URL
+2. Add a new file to the repo
    1. New File → R Script → choose filename → OK
    2. Add some text to the file
-   2. Save the file
-5. In the Git tab (usually in the same pane as Environment and History), check the box next to the new file to add it to the staging area.
-6. Click "Commit", and a window will appear. In the "Commit message" box, type a descriptive message about what this update incudes. In our case, it can be, "created first file". Think of this as a checkpoint. You can return to it any time.
-7. Click "Push" to send your commit to GitHub.
+   3. Save the file
+3. In the Git tab (usually in the same pane as Environment and History), check the box next to the new file to add it to the staging area.
+4. Click "Commit", and a window will appear. In the "Commit message" box, type a descriptive message about what this update incudes. In our case, it can be, "created first file". Think of this as a checkpoint. You can return to it any time.
+5. Click "Push" to send your commit to GitHub.
 
 ## Branch-based collaboration
 
