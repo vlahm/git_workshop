@@ -22,9 +22,9 @@ There are no Rstudio equivalents for most of these steps.
    + macOS/Linux/Unix users: `git config --global core.autocrlf input`
 5. _Make sure Rstudio knows where to find the git executable_
    + _Tools → Global Options → Git/SVN; The path listed under "Git executable" should end with "git" or "git.exe". If it doesn't:_
-    + _Mac/Linux terminal: `which git` to reveal the path to the executable; browse to that path in Rstudio_
-    + _Windows git bash terminal: `cygpath -w "$(which git)"` to reveal the path to the executable; browse to git.exe in Rstudio_
-    + _Restart Rstudio_
+      + _Mac/Linux terminal: `which git` to reveal the path to the executable; browse to that path in Rstudio_
+      + _Windows git bash terminal: `cygpath -w "$(which git)"` to reveal the path to the executable; browse to git.exe in Rstudio_
+      + _Restart Rstudio_
 6. Optional: [Establish secure connection to GitHub from your machine](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys).
    + _This can also be done from Rstudio: Tools → Global Options → Git/SVN → Create SSH Key_
 
