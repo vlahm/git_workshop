@@ -1,6 +1,8 @@
 # git_workshop
 **Git setup and standard procedure, with shell commands and Rstudio equivalents**
 
+**Please complete steps 1-3 of the "Setup and configuration" section before the workshop begins**
+
  + _Italicized text pertains to Rstudio_.
  + If you're on Windows, this guide assumes you will interact with git through git bash, not cmd or Powershell.
  + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
