@@ -54,10 +54,9 @@ There are no Rstudio equivalents for most of these steps.
    3. `git clone <paste>`
    4. Press enter. now you should have `~/projects/git_demo`
    5. `cd git_demo`
-2. Add a new file to the repo
-   1. You could use your graphical file explorer, or `nano new_file.txt`
-   2. Add some text to the file
-   3. Save the file
+2. Add a new file to the repo. You may use a graphical file explorer, or e.g. `nano new_file.txt`
+   1. Add some text to the file
+   2. Save the file
 3. Use `git status` to see what has changed
 4. Use `git add new_file.txt` to add the file to the staging area, or `git add .` to recursively add all files in the current directory.
    + It's good practice to verify each action with `git status`, to make sure you're tracking only the files you mean to
@@ -80,16 +79,16 @@ There are no Rstudio equivalents for most of these steps.
 
 ## Branch-based collaboration
 
-More versatile, but you need to be aware of which branch you're working in. Can be managed entirely through Rstudio.
+Versatile, but you need to be aware of which branch you're working in. Can be managed entirely through Rstudio.
 
 1. Make sure you don't have any unstaged changes (`git status` or _check the Git tab_).
 2. Create a new branch with your name, e.g. `git checkout -b mike`, _or click New Branch, type your name, click Create_
 5. Everyone create a file named `\<your name\>.txt` . Add a few lines of text to it. Then add, commit, push.
 6. Everyone initiate a pull request from your branch to the main branch on GitHub.
    1. Select the new branch from the dropdown all the way to the left of the green Code button.
-   1. Click "Contribute" → "Open pull request"
-   2. Provide title and description. You can automatically close issues with e.g. "closes #5" in your description ([details](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests)).
-   3. "Create pull request". Confirm.
+   2. Click "Contribute" → "Open pull request"
+   3. Provide title and description. You can automatically close issues with e.g. "closes #5" in your description ([details](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests)).
+   4. "Create pull request". Confirm.
 7. Everyone merge someone else's PR.
 8. Everyone `git pull upstream main` _or switch back to the main branch and click Pull_ to update local code.
 
@@ -112,7 +111,7 @@ Generally safer for new users, because you don't have to remember which branch y
 7. Everyone merge someone else's PR.
 8. Everyone `git pull upstream main` to update local code.
 
-## Merge conflict resolution
+## Merge conflicts
 
 Merge conflicts can arise when people are working on the same file at the same time. It's unlikely that you'll encounter one outside of a collaboration, but not impossible.
 
@@ -143,10 +142,10 @@ Your job is to delete one variant of the conflicted code, and delete all of the 
    + `git show`
    + `git merge`
    + `git checkout`
- + You can almost always undo changes. That's the main reason for using git. For example, to undo your last commit and return all changes to the stage, use `git reset --soft HEAD~1`
+ + You can almost always undo changes. That's the main reason for using git. For example, to undo your last commit and return all changes to the stage, use `git reset --soft HEAD~1`. Watch out for `git rebase`, because it modifies history.
  + Aliases make it easier to type common or arcane commands. Here are some good ones:
 
- `git config --global alias.slog log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit`
- `git config --global alias.c  "commit -m"`
+   `git config --global alias.slog log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit`
+   `git config --global alias.c  "commit -m"`
 
- After running those config lines, you can type `git slog` instead of `git log` to show a compact, informative log. You can also type `git c "message"` instead of `git commit -m "message"`. 
+   After running those config lines, you can type `git slog` instead of `git log` to show a compact, informative log. You can also type `git c "message"` instead of `git commit -m "message"`. 
