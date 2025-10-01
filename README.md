@@ -145,7 +145,7 @@ Your job is to delete one variant of the conflicted code, and delete all of the 
  + You can almost always undo changes. That's the main reason for using git. For example, to undo your last commit and return all changes to the stage, use `git reset --soft HEAD~1`. Watch out for `git rebase`, because it modifies history.
  + Aliases make it easier to type common or arcane commands. Here are some good ones:
 
-   `git config --global alias.slog log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit`
-   `git config --global alias.c  "commit -m"`
+   + `git config --global alias.slog log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit`
+   + `git config --global alias.c  "commit -m"`
 
-   After running those config lines, you can type `git slog` instead of `git log` to show a compact, informative log. You can also type `git c "message"` instead of `git commit -m "message"`. 
+         After running those config lines, you can type `git slog` instead of `git log` to show a compact, informative log. You can also type `git c "message"` instead of `git commit -m "message"`. 
