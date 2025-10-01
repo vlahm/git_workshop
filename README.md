@@ -1,11 +1,8 @@
 # git_workshop
-Git setup and standard procedure with shell commands and Rstudio equivalents
+**Git setup and standard procedure, with shell commands and Rstudio equivalents**
 
  + _Italicized text pertains to Rstudio_.
  + If you're on Windows, this guide assumes you will interact with git through git bash, not cmd or Powershell.
-
-**Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
-**Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `data/` to the `.gitignore` file.
 
 ## Setup and configuration
 There are no Rstudio equivalents for most of these steps.
@@ -22,17 +19,17 @@ There are no Rstudio equivalents for most of these steps.
    + Windows users: `git config --global core.autocrlf true`
    + macOS/Linux/Unix users: `git config --global core.autocrlf input`
 5. _Make sure Rstudio knows where to find the git executable_
-   + _Tools -> Global Options -> Git/SVN; The path listed under "Git executable" should end with "git" or "git.exe". If it doesn't:_
-   + _Mac/Linux terminal: `which git` to reveal the path to the executable; browse to that path in Rstudio_
-   + _Windows git bash terminal: `cygpath -w "$(which git)"` to reveal the path to the executable; browse to git.exe in Rstudio_
+   + _Tools → Global Options → Git/SVN; The path listed under "Git executable" should end with "git" or "git.exe". If it doesn't:_
+     + _Mac/Linux terminal: `which git` to reveal the path to the executable; browse to that path in Rstudio_
+     + _Windows git bash terminal: `cygpath -w "$(which git)"` to reveal the path to the executable; browse to git.exe in Rstudio_
 6. Optional: [Establish secure connection to GitHub from your machine](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys).
-   + _This can also be done from Rstudio: Tools -> Global Options -> Git/SVN -> Create SSH Key_
+   + _This can also be done from Rstudio: Tools → Global Options → Git/SVN → Create SSH Key_
 
 ## Create a "remote repository"
-i.e. a project folder hosted on github.com
+**i.e. a project folder hosted on github.com**
 
 1. make a new repository on GitHub
-   1. From https://github.com/your_username, click Repositories -> New
+   1. From https://github.com/your_username, click Repositories → New
    2. Name it "git\_demo" and give a short description
    3. Add a README (or do so later)
    4. Optional: give it a default `.gitignore` file for the primary language of the repo. This will prevent git from tracking files that don't need to be version-controlled.
@@ -40,7 +37,7 @@ i.e. a project folder hosted on github.com
       + MIT gives free rein.
       + GNU GPL-3 is "copyleft": all derivatives must also be GPL-3.
    6. Click "Create repository"
-   7. Copy the repository URL: click the green "Code" button -> HTTPS (unless you've set up SSH) -> copy to clipboard
+   7. Copy the repository URL: click the green "Code" button → HTTPS (unless you've set up SSH) → copy to clipboard
 
 ## Simple version control (shell)
 
@@ -64,9 +61,9 @@ i.e. a project folder hosted on github.com
 ## _Simple version control (Rstudio)_
 
 2. Clone the repo to your machine
-   2. File -> New Project -> Version Control -> Git -> paste the repository URL
+   2. File → New Project → Version Control → Git → paste the repository URL
 3. Add a new file to the repo
-   1. New File -> R Script -> choose filename -> OK
+   1. New File → R Script → choose filename → OK
    2. Add some text to the file
    2. Save the file
 5. In the Git tab (usually in the same pane as Environment and History), check the box next to the new file to add it to the staging area.
@@ -82,7 +79,7 @@ More versatile, but you need to be aware of which branch you're working in. Can 
 5. Everyone create a file named `\<your name\>.txt` . Add a few lines of text to it. Then add, commit, push.
 6. Everyone initiate a pull request from your branch to the main branch on GitHub.
    1. Select the new branch from the dropdown all the way to the left of the green Code button.
-   1. Click "Contribute" -> "Open pull request"
+   1. Click "Contribute" → "Open pull request"
    2. Provide title and description. You can automatically close issues with e.g. "closes #5" in your description ([details](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests)).
    3. "Create pull request". Confirm.
 7. Everyone merge someone else's PR.
@@ -93,15 +90,15 @@ More versatile, but you need to be aware of which branch you're working in. Can 
 Generally safer for new users, because you don't have to remember which branch you're on, but harder to do through Rstudio. 
 
 1. Optional: create a GitHub organization to centralize your upstream repo. Otherwise a supervisor or lead team member can create the upstream repo.
-2. Collaborators fork the repo on GitHub: Click "Fork" -> "Create Fork"
+2. Collaborators fork the repo on GitHub: Click "Fork" → "Create Fork"
 3. Clone the fork just like you cloned git\_demo above.
 4. Establish connection to upstream.
-   1. Green "Code" button -> copy to clipboard
+   1. Green "Code" button → copy to clipboard
    2. In your repo: `git remote add upstream <paste>`
    3. Verify origin and upstream urls with `git remote -v`
 5. Everyone create a file named `\<your name\>.txt`. Add a few lines of text to it. Then add, commit, push to origin.
 6. Everyone initiate a pull request from your fork on GitHub.
-   1. Click "Contribute" -> "Open pull request"
+   1. Click "Contribute" → "Open pull request"
    2. Provide title and description. You can automatically close issues with e.g. "closes #5" in your description ([details](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests)).
    3. "Create pull request". Confirm.
 7. Everyone merge someone else's PR.
@@ -129,6 +126,8 @@ Your job is to delete one variant of the conflicted code, and delete all of the 
 
 ### Notes
 
+ + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
+ + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `"data/" to the `.gitignore` file.
  + Other git commands you will find useful:
    + `git help`
    + `git log`
