@@ -3,6 +3,8 @@
 
  + _Italicized text pertains to Rstudio_.
  + If you're on Windows, this guide assumes you will interact with git through git bash, not cmd or Powershell.
+ + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
+ + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `"data/" to the `.gitignore` file.
 
 ## Setup and configuration
 There are no Rstudio equivalents for most of these steps.
@@ -124,7 +126,7 @@ that conflicts with it
 
 Your job is to delete one variant of the conflicted code, and delete all of the <<</===/>>> lines that were inserted by git, then save, add, commit. Conflict resolved!
 
-### Notes
+## Notes
 
  + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
  + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `"data/" to the `.gitignore` file.
