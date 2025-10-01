@@ -6,6 +6,8 @@
  + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
  + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `"data/" to the `.gitignore` file.
 
+[Version control diagrams](https://docs.google.com/presentation/d/1zawlFlLp0z2PtpAIuK4VuKJb_JP_tdWCEVYMKBt0LLs/edit?usp=sharing) for context
+
 ## Setup and configuration
 There are no Rstudio equivalents for most of these steps.
 
