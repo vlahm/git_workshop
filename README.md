@@ -7,7 +7,7 @@
  + _Italicized text pertains to Rstudio_.
  + If you're on Windows, this guide assumes you will interact with git through git bash, not cmd or Powershell.
  + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
- + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `"data/" to the `.gitignore` file.
+ + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with "data/" (no quotes) to the `.gitignore` file.
 
 [Version control diagrams](https://docs.google.com/presentation/d/1zawlFlLp0z2PtpAIuK4VuKJb_JP_tdWCEVYMKBt0LLs/edit?usp=sharing) for context
 
@@ -134,7 +134,7 @@ Your job is to delete one variant of the conflicted code, and delete all of the 
 ## Notes
 
  + **Warning**: Do not let git keep track of files that contain secrets, like passwords or API keys. 
- + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with `"data/" to the `.gitignore` file.
+ + **Notice**: Git is not intended for keeping track of large (>100MB) files. Put these in e.g. `data/` and then add a line with "data/" (no quotes) to the `.gitignore` file.
  + Other git commands you will find useful:
    + `git help`
    + `git log`
